@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gaming Zone - Home</title>
+      <!-- Main File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/main.css' %}">
+      <!-- Normalize File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/normalize.css' %}">
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/0c7891565e.js" crossorigin="anonymous"></script>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Science+Gothic:wdth,wght@50..200,100..900&display=swap"
+            rel="stylesheet">
+   </head>
+   <body>
+      <div class="header">
+         <div class="container">
+            <img src="{% static 'gaming/images/Logo.png' %}" alt="" class="logo">
+            <div class="links">
+               <a href="#survey" class="survey">Survey</a>
+               <a href="#about" class="about">About</a>
+               <a href="#contact" class="contact">Contact</a>
+            </div>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="intro">
+         <div class="container">
+            <p class="welcome">Welcome to</p>
+            <p class="gz">GAMING ZONE</p>
+            <p class="slogan">The right place for <span></span></p>
+         </div>
+         <img src="{% static 'gaming/images/Controller.jpg' %}" alt="">
+      </div>
+      <!-- ---------- -->
+      <div class="hr" id="survey"></div>
+      <!-- ---------- -->
+      <div class="survey">
+         <div class="container">
+            <p class="text">Our goal is to understand public opinion on all things related to gaming and to help produce
+               games that suit players and their tastes</p>
+            <p class="choose">If you want to help, choose a survey to fill</p>
+            <div class="cards">
+               <div class="pro card">
+                  <p>For pro players</p>
+                  <div class="hover">
+                     <a href="{% url 'pro' %}">CLICK HERE</a>
+                  </div>
+               </div>
+               <div class="noob card">
+                  <p>For newbies</p>
+                  <div class="hover">
+                     <a href="{% url 'newbie' %}">CLICK HERE</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="hr" id="about"></div>
+      <!-- ---------- -->
+      <div class="about">
+         <div class="container">
+            <p class="text">Gaming Zone actually contains only two members, Pierre and Jad. We are
+               trying to understand many gaming aspects especially in our environment, in order to elevate the special
+               ideas, improve the game development production and locally enhance the gaming field in general.</p>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="hr" id="contact"></div>
+      <!-- ---------- -->
+      <div class="contact">
+         <div class="container">
+            <p class="text">If u have any question or advice, send it on:</p>
+            <p class="email">jadsliman72@gmail.com</p>
+            <p class="email">jadsliman72@gmail.com</p>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="footer">
+         <p class="footertext">Jad Sliman - Pierre Battikh | Dec 2025</p>
+      </div>
+   </body>
+</html>

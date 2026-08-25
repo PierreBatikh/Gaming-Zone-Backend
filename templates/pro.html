@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gaming Zone - Pro</title>
+      <!-- Main File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/main.css' %}">
+      <!-- Form File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/form.css' %}">
+      <!-- Normalize File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/normalize.css' %}">
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/0c7891565e.js" crossorigin="anonymous"></script>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Science+Gothic:wdth,wght@50..200,100..900&display=swap"
+            rel="stylesheet">
+   </head>
+   <body>
+      <div class="header">
+         <div class="container">
+            <img src="{% static 'gaming/images/Logo.png' %}" alt="" class="logo">
+            <div class="links">
+               <a href="{% url 'index' %}" class="home">Home</a>
+            </div>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="intro">
+         <div class="container">
+            <p class="welcome">Survey for</p>
+            <p class="gz">PRO PLAYERS</p>
+            <p class="slogan">YOU ALWAYS WANTED TO BE ASKED THESE QUESTIONS :D</p>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="form">
+         <div class="container">
+            <form action="{% url 'pro' %}" method="post" target="_blank">
+               {% csrf_token %}
+               <div class="name">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="Name" required id="name">
+               </div>
+               <div class="hr2"></div>
+               <div class="age">
+                  <label for="age">Your Age</label>
+                  <input type="number" name="Age" min="10" max="90" id="age" required>
+               </div>
+               <div class="hr2"></div>
+               <div class="platform">
+                  <label for="platform">On which platform do you play the most?</label>
+                  <input list="platforms" id="platform" name="Platform" required>
+                  <datalist id="platforms">
+                     <option value="PC"></option>
+                     <option value="Console"></option>
+                     <option value="Mobile Device"></option>
+                     <option value="Other"></option>
+                  </datalist>
+               </div>
+               <div class="hr2"></div>
+               <div class="name">
+                  <label for="favgame">Favourite Game</label>
+                  <input type="text" name="Favourite Game" required id="favgame">
+               </div>
+               <div class="hr2"></div>
+               <div class="genre progenre">
+                  <label for="g">What is your favourite games genre and why?</label>
+                  <textarea name="Genre" id="g"></textarea>
+               </div>
+               <div class="hr2"></div>
+               <div class="style">
+                  <label for="style">Which game art style do you like the most?</label>
+                  <input list="artstyle" id="style" name="Style" required>
+                  <datalist id="artstyle">
+                     <optgroup label="3D">
+                        <option value="Low Poly"></option>
+                        <option value="Voxel"></option>
+                        <option value="Anime"></option>
+                        <option value="Photorealistic"></option>
+                     </optgroup>
+                     <optgroup label="2D">
+                        <option value="Pixel art"></option>
+                        <option value="Vector"></option>
+                        <option value="Hand Painted"></option>
+                     </optgroup>
+                  </datalist>
+               </div>
+               <div class="hr2"></div>
+               <div class="opinion">
+                  <label for="cr">What do you think about Clash Royale?</label>
+                  <textarea name="Clash Royale" id="cr"></textarea>
+               </div>
+               <div class="hr2"></div>
+               <div class="opinion">
+                  <label for="hk">What do you think about Hollow Knight: Silksong?</label>
+                  <textarea name="Hollow Knight: Silksong" id="hk"></textarea>
+               </div>
+               <div class="hr2"></div>
+               <div class="opinion">
+                  <label for="rdr">What do you think about RDR2?</label>
+                  <textarea name="RDR2" id="rdr"></textarea>
+               </div>
+               <div class="hr2"></div>
+               <div class="submit">
+                  <input type="submit" value="Submit">
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="footer">
+         <p class="footertext">Jad Sliman - Pierre Battikh | Dec 2025</p>
+      </div>
+   </body>
+</html>

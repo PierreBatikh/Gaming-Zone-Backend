@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gaming Zone - Newbie</title>
+      <!-- Main File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/main.css' %}">
+      <!-- Form File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/form.css' %}">
+      <!-- Normalize File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/normalize.css' %}">
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/0c7891565e.js" crossorigin="anonymous"></script>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Science+Gothic:wdth,wght@50..200,100..900&display=swap"
+            rel="stylesheet">
+   </head>
+   <body>
+      <div class="header">
+         <div class="container">
+            <img src="{% static 'gaming/images/Logo.png' %}" alt="" class="logo">
+            <div class="links">
+               <a href="{% url 'thanks' %}" class="home">Home</a>
+            </div>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="intro">
+         <div class="container">
+            <p class="welcome">Survey for</p>
+            <p class="gz">NEWBIES</p>
+            <p class="slogan">Here are some easy questions for you :D</p>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="form">
+         <div class="container">
+            <form action="{% url 'newbie' %}" method="post" target="_blank">
+               {% csrf_token %}
+               <div class="name">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="Name" required id="name">
+               </div>
+               <div class="hr2"></div>
+               <div class="age">
+                  <label for="age">Your Age</label>
+                  <input type="number" name="Age" min="10" max="90" id="age" required>
+               </div>
+               <div class="hr2"></div>
+               <div class="platform">
+                  <label for="platform">On which platform do you play the most?</label>
+                  <input list="platforms" id="platform" name="Platform" required>
+                  <datalist id="platforms">
+                     <option value="PC"></option>
+                     <option value="Console"></option>
+                     <option value="Mobile Device"></option>
+                     <option value="Other"></option>
+                  </datalist>
+               </div>
+               <div class="hr2"></div>
+               <div class="name">
+                  <label for="favgame">Favourite Game</label>
+                  <input type="text" name="Favourite Game" required id="favgame">
+               </div>
+               <div class="hr2"></div>
+               <div class="genre">
+                  <label class="question">What is your favourite games genre?</label>
+                  <div class="adventure">
+                     <input type="checkbox" name="Genre" value="Adventure" id="ad">
+                     <label for="ad">Adventure</label>
+                  </div>
+                  <div class="puzzle">
+                     <input type="checkbox" name="Genre" value="Puzzle" id="pu">
+                     <label for="pu">Puzzle</label>
+                  </div>
+                  <div class="Shooter">
+                     <input type="checkbox" name="Genre" value="Shooter" id="sh">
+                     <label for="sh">Shooter</label>
+                  </div>
+                  <div class="other">
+                     <input type="checkbox" name="Genre" value="Other" id="other">
+                     <label for="other">Other genre</label>
+                     <div class="othertext">
+                        <label for="othertext">Type the genre you like</label>
+                        <input type="text" id="othertext" name="Other">
+                     </div>
+                  </div>
+               </div>
+               <div class="submit">
+                  <input type="submit" value="Submit">
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="footer">
+         <p class="footertext">Jad Sliman - Pierre Battikh | Dec 2025</p>
+      </div>
+   </body>
+</html>

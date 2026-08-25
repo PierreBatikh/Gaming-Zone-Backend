@@ -1,0 +1,129 @@
+/* S Global Variables */
+
+:root {
+   --color1: #000000;
+   --color2: #2b2c28;
+   --color3: #339989;
+   --color4: #7de2d1;
+   --color5: #fffafb;
+   --trans: 0.3s;
+}
+
+/* E Global Variables */
+
+.form .container {
+   padding: 25px;
+}
+
+.form .container form > div {
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+}
+
+.form .container form div label[for] {
+   margin-right: 25px;
+}
+
+.form .container form div label[for="othertext"] {
+   margin: 0;
+}
+
+.form .container form > div > label {
+   color: var(--color4);
+   font-size: 20px;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form .container form div .question {
+   width: 100%;
+   margin-bottom: 25px;
+}
+
+.form .container form div .othertext {
+   width: 100%;
+   margin-top: 25px;
+   position: absolute;
+   text-align: center;
+   display: none;
+}
+
+.form .container form div .othertext input {
+   width: 150px;
+}
+
+.form .container form div .othertext #othertext {
+   margin-top: 10px;
+}
+
+.form .container form div .other #other:checked ~ .othertext {
+   display: block;
+}
+
+.form .container form div .other {
+   position: relative;
+}
+
+.genre,
+.opinion {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   text-align: center;
+   margin-bottom: 150px;
+}
+
+.progenre,
+.opinion {
+   margin-bottom: 25px;
+}
+
+.form .container form div div label {
+   color: var(--color4);
+   margin-left: 15px;
+   font-size: 21px;
+   font-weight: bold;
+}
+
+input[type="checkbox"] {
+   margin-top: 25px;
+}
+
+input:not([type="checkbox"]),
+textarea {
+   font-family: "Science Gothic", sans-serif;
+   background: none;
+   color: var(--color4);
+   outline: none;
+   border: 5px solid var(--color4);
+   border-radius: 15px;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 0 10px;
+}
+
+#g,
+#cr,
+#rdr,
+#hk {
+   width: 70%;
+   margin-top: 25px;
+   height: 150px;
+}
+
+.submit input {
+   margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+   input {
+      width: 50px;
+   }
+
+   input:not([type="checkbox"]) {
+      width: 150px;
+   }
+}

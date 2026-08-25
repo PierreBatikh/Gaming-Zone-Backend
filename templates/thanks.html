@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Thank you</title>
+      <!-- Main File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/main.css' %}"> 
+      <!-- Normalize File -->
+      <link rel="stylesheet" href= " {% static 'gaming/styles/normalize.css' %}">
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/0c7891565e.js" crossorigin="anonymous"></script>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Science+Gothic:wdth,wght@50..200,100..900&display=swap"
+            rel="stylesheet">
+   </head>
+   <body>
+      <div class="header">
+         <div class="container">
+            <img src="{% static 'gaming/images/Logo.png' %}" alt="" class="logo">
+            <div class="links">
+               <a href="{% url 'index' %}" class="home">Home</a>
+            </div>
+         </div>
+      </div>
+      <!-- ---------- -->
+      <div class="intro">
+         <div class="container">
+            <p class="welcome" style="color: #7de2d1;">THANK YOU</p>
+            <p class="slogan" style="margin-bottom: 45px;">That's it! we appreciate your help &lt;3</p>
+            <a href="{% url 'index' %}" class="gohome" style="text-decoration: none;
+                                                      color: #7de2d1;
+                                                      font-size: 26px;
+                                                      font-weight: bold;
+                                                      border: 6px solid;
+                                                      border-radius: 15px;
+                                                      padding: 0 10px;">Home</a>
+         </div>
+      </div>
+   </body>
+</html>
